@@ -21,11 +21,19 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+
+        }
+    },
+    methods: {
+        active: function() {
+            alert(1)
+        }
+    },
     components: {}
 }
 </script>
 <style scoped>
-.router-link-active {
-    color: rgb(9, 187, 7);
-}
+
 </style>
