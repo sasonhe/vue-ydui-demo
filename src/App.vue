@@ -1,20 +1,24 @@
 <template>
 <div>
-    <v-header></v-header>
-    <lightbox></lightbox>
-    <home></home>
+    <yd-tabbar fixed>
+        <yd-tabbar-item title="首页" link="#/lightbox" :active="true">
+            <yd-icon name="home-outline" slot="icon" size="0.54rem"></yd-icon>
+        </yd-tabbar-item>
+        <yd-tabbar-item title="导航1" link="#">
+            <yd-icon name="shopcart-outline" slot="icon" size="0.54rem"></yd-icon>
+        </yd-tabbar-item>
+        <yd-tabbar-item title="导航2" link="#">
+            <yd-icon name="ucenter-outline" slot="icon" size="0.54rem"></yd-icon>
+        </yd-tabbar-item>
+        <yd-tabbar-item title="个人中心" link="#">
+            <yd-icon name="like-outline" slot="icon" size="0.54rem"></yd-icon>
+        </yd-tabbar-item>
+    </yd-tabbar>
 </div>
 </template>
 <script>
-import home from './components/home.vue'
-import header from './components/header.vue'
-import lightbox from './components/lightbox.vue'
 export default {
-    components: {
-        home,
-        "v-header": header,
-        lightbox
-    }
+    components: {}
 }
 </script>
 <style scoped>
