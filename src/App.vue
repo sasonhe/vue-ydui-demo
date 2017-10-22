@@ -1,7 +1,7 @@
 <template>
 <div>
     <yd-tabbar fixed>
-        <yd-tabbar-item title="首页" link="/" :active="true">
+        <yd-tabbar-item title="首页" link="/" active>
             <yd-icon name="home-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
         <yd-tabbar-item title="导航1" link="/hello">
