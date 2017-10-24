@@ -11,7 +11,7 @@
     <keep-alive>
         <router-view></router-view>
     </keep-alive>
-    <yd-tabbar slot="tabbar">
+    <yd-tabbar slot="tabbar" color=''>
         <yd-tabbar-item title="首页" link="/" exact>
             <yd-icon name="home-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
@@ -32,7 +32,8 @@ export default {
     data() {
         return {
             value2: '',
-            result: []
+            result: [],
+            yellow: 'blue'
         }
     },
     methods: {
@@ -62,5 +63,7 @@ export default {
 }
 </script>
 <style scoped>
-
+.router-link-active {
+    color: red;
+}
 </style>
