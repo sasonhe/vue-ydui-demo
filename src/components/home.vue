@@ -1,14 +1,16 @@
 <template>
 <div>
-    <yd-search fixed :result="result" fullpage v-model="value2" :item-click="itemClickHandler" :on-submit="submitHandler"></yd-search>
+    <!-- <yd-search fixed :result="result" fullpage v-model="value2" :item-click="itemClickHandler" :on-submit="submitHandler"></yd-search> -->
     <slider></slider>
     <grids></grids>
+    <homeList></homeList>
 </div>
 </template>
 
 <script type="text/babel">
 import slider from './slider.vue'
 import grids from './grids.vue'
+import homeList from './homeList.vue'
 export default {
     data() {
         return {
@@ -42,7 +44,8 @@ export default {
     },
     components: {
         slider,
-        grids
+        grids,
+        homeList
     }
 }
 </script>
