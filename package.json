@@ -29,6 +29,6 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
-    "vue-ydui": "^1.0.1"
+    "vue-ydui": "^1.0.5"
   }
 }
