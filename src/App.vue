@@ -1,7 +1,7 @@
 <template>
 <div>
     <yd-tabbar fixed>
-        <yd-tabbar-item title="首页" link="/" exact v-bind:style="{ color: activeColor}">
+        <yd-tabbar-item title="首页" link="/" exact>
             <yd-icon name="home-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
         <yd-tabbar-item title="导航1" link="/hello" exact>
@@ -23,13 +23,11 @@
 export default {
     data() {
         return {
-            activeColor: 'rgb(9, 187, 7)'
+
         }
     },
     methods: {
-        active: function() {
-            alert(1)
-        }
+
     },
     components: {}
 }
