@@ -8,6 +8,10 @@ module.exports = {
         path: __dirname + '/build',
         filename: '[name].js'
     },
+    devServer: {
+        host: '0.0.0.0',
+        port: 8080
+    },
     // 加载器配置
     module: {
         rules: [{
