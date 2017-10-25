@@ -1,3 +1,4 @@
+var OpenBrowserPlugin = require('open-browser-webpack-plugin')
 module.exports = {
     // 入口文件
     entry: {
@@ -9,9 +10,13 @@ module.exports = {
         filename: '[name].js'
     },
     devServer: {
+        inline:true,
         host: '0.0.0.0',
         port: 8080
     },
+    plugins: [
+        new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+    ],
     // 加载器配置
     module: {
         rules: [{

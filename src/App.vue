@@ -6,7 +6,7 @@
         </router-link> -->
         <div slot="center"><span class="yd-navbar-center-title" style="color: rgb(92, 92, 92); font-size: 0.4rem;">{{title}}</span></div>
         <router-link to="/head" slot="right">
-            <yd-icon name="ucenter-outline"></yd-icon>
+            <yd-icon name="ucenter-outline" style="color: rgb(92, 92, 92);"></yd-icon>
         </router-link>
     </yd-navbar>
     <keep-alive>
@@ -30,14 +30,14 @@
 </template>
 <script>
 export default {
-    props:{
+    props: {
 
     },
     data() {
         return {
             value2: '',
             result: [],
-            title:'导航'
+            title: '导航'
         }
     },
     methods: {
