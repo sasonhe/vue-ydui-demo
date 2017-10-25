@@ -1,7 +1,7 @@
 // import 组件
+import home from './components/home.vue'
 import head from './components/header.vue'
 import hello from './components/hello.vue'
-import home from './components/home.vue'
 import lightbox from './components/lightbox.vue'
 export default [
     // 路由
