@@ -1,6 +1,16 @@
 <template>
 <div>
     <!-- <yd-search fixed :result="result" fullpage v-model="value2" :item-click="itemClickHandler" :on-submit="submitHandler"></yd-search> -->
+    <!-- <yd-navbar title="首页" fixed bgcolor="rgba(151, 151, 151,0.4)">
+        <router-link to="#" slot="right">
+            <yd-icon name="ucenter-outline"></yd-icon>
+        </router-link>
+    </yd-navbar> -->
+    <!-- <yd-navbar fixed>
+        <router-link to="#" slot="right">
+            <yd-icon name="ucenter-outline"></yd-icon>
+        </router-link>
+    </yd-navbar> -->
     <slider></slider>
     <grids></grids>
     <homeList></homeList>
