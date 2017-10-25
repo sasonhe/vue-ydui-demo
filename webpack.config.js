@@ -5,7 +5,7 @@ module.exports = {
     },
     // 输出文件、路径
     output: {
-        path: __dirname + '/build',
+        path: __dirname + '/',
         filename: '[name].js'
     },
     devServer: {

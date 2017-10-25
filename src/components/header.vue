@@ -1,16 +1,15 @@
 <template>
-<h1>2</h1>
+    <div>
+        <h1>hello App</h1>
+    </div>
 </template>
-
 <script>
-export default {
-    data() {
-        return {}
-    },
-    created() {},
-    methods: {}
+export default{
+    components:{
+
+    }
 }
 </script>
-
-<style>
+<style scoped>
+div{width: 300px;height: 100px;margin: 50px auto;text-align: center;font-size: 24px;}
 </style>
