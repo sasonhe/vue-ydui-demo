@@ -3,6 +3,7 @@ import home from './components/home.vue'
 import head from './components/header.vue'
 import hello from './components/hello.vue'
 import lightbox from './components/lightbox.vue'
+// import Search from './components/search.vue'
 export default [
     // 路由
     {
@@ -25,4 +26,9 @@ export default [
         name: 'lightbox',
         component: lightbox
     }
+    // {
+    //     path: '/Search',
+    //     name: 'Search',
+    //     component: Search
+    // }
 ]
