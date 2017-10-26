@@ -13,7 +13,7 @@
                 <div>content</div>
             </yd-list-other>
             <yd-list-other slot="other">
-                <p>描述1234567812312313213</p>
+                <p>{{item.title}}</p>
             </yd-list-other>
         </yd-list-item>
     </yd-list>
