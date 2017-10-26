@@ -1,9 +1,9 @@
 // import 组件
 import home from './components/home.vue'
-import head from './components/header.vue'
-import hello from './components/hello.vue'
+import scroll from './components/scroll.vue'
+import tabar from './components/tabar.vue'
 import lightbox from './components/lightbox.vue'
-// import Search from './components/search.vue'
+import lightbox0 from './components/lightbox0.vue'
 export default [
     // 路由
     {
@@ -12,23 +12,23 @@ export default [
         component: home
     },
     {
-        path: '/hello',
-        name: 'hello',
-        component: hello
+        path: '/tabar',
+        name: 'tabar',
+        component: tabar
     },
     {
-        path: '/head',
-        name: 'head',
-        component: head
+        path: '/scroll',
+        name: 'scroll',
+        component: scroll
     },
     {
         path: '/lightbox',
         name: 'lightbox',
         component: lightbox
+    },
+    {
+        path: '/lightbox0',
+        name: 'lightbox0',
+        component: lightbox0
     }
-    // {
-    //     path: '/Search',
-    //     name: 'Search',
-    //     component: Search
-    // }
 ]

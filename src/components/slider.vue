@@ -1,7 +1,7 @@
 <template>
 <yd-slider autoplay="3000">
     <yd-slider-item>
-        <a href="javascript:;">
+        <a href="http://baidu.com">
                 <img src="http://static.ydcss.com/uploads/ydui/1.jpg">
             </a>
     </yd-slider-item>

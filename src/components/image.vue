@@ -1,13 +1,7 @@
 <template>
-<div>
-    <!-- <yd-navbar title="导航2" >
-        <router-link to="" slot="right" @click.native="show = true">
-            <yd-icon name="more" style="color: rgb(92, 92, 92);"></yd-icon>
-        </router-link>
-    </yd-navbar> -->
-    <yd-popup v-model="show" position="left" width="40%">
-        <yd-button type="danger" style="margin: 30px;" @click.native="show = false">Close</yd-button>
-    </yd-popup>
+<yd-layout>
+
+
     <yd-lightbox :num="list.length">
 
         <yd-flexbox style="padding-right: 0.05rem;">
@@ -33,14 +27,13 @@
             </div>
         </yd-lightbox-txt>
     </yd-lightbox>
-</div>
+</yd-layout>
 </template>
+
 <script>
-// import popup from './popup.vue'
 export default {
     data() {
         return {
-            show:false,
             list: [{
                     src: 'http://static.ydcss.com/uploads/lightbox/meizu_s1.jpg',
                     original: 'http://static.ydcss.com/uploads/lightbox/meizu_1.jpg'
@@ -67,12 +60,6 @@ export default {
                 }
             ]
         }
-    },
-    components: {
-
     }
 }
 </script>
-<style scoped>
-
-</style>

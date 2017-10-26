@@ -22,10 +22,10 @@
         <yd-tabbar-item title="首页" link="/" exact>
             <yd-icon name="home-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
-        <yd-tabbar-item title="导航2" link="/hello" exact>
+        <yd-tabbar-item title="导航2" link="/tabar" exact>
             <yd-icon name="shopcart-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
-        <yd-tabbar-item title="导航3" link="/head" exact>
+        <yd-tabbar-item title="导航3" link="/scroll" exact>
             <yd-icon name="like-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
         <yd-tabbar-item title="个人中心" link="/lightbox" exact>
@@ -38,26 +38,28 @@
 export default {
     data() {
         return {
-            show:false,
+            show: false,
             value2: '',
             result: []
         }
     },
-    computed:{
-        title () {
-           switch (this.$route.path.split('/')[1]) {
-               case '':
-                 return "首页"
-               case 'home':
-                 return "首页"
-               case 'hello':
-                 return "导航2"
-               case 'head':
-                 return "导航3"
-               case 'lightbox':
-                 return "个人中心"
-           }
-         }
+    computed: {
+        title() {
+            switch (this.$route.path.split('/')[1]) {
+                case '':
+                    return "首页"
+                case 'home':
+                    return "首页"
+                case 'tabar':
+                    return "美图欣赏"
+                case 'scroll':
+                    return "导航3"
+                case 'lightbox':
+                    return "个人中心"
+                case 'lightbox0':
+                    return "子路由"
+            }
+        }
     },
     methods: {
         getResult(val) {
