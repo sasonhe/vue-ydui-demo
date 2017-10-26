@@ -1,7 +1,4 @@
 <template>
-    <div>
-        <h1>hello world !</h1>
-    </div>
 <div>
     <yd-navbar title="导航2">
         <a href="javascript:;" slot="right">
@@ -35,7 +32,6 @@
         </yd-lightbox-txt>
     </yd-lightbox>
 </div>
->>>>>>> 0c3a39c528dc1ad1083119daff7e9e09d1bc41dc
 </template>
 <script>
 export default {
