@@ -13,6 +13,7 @@
     </yd-navbar> -->
     <slider></slider>
     <grids></grids>
+    <rollnotice></rollnotice>
     <homeList></homeList>
 </div>
 </template>
@@ -21,6 +22,7 @@
 import slider from './slider.vue'
 import grids from './grids.vue'
 import homeList from './homeList.vue'
+import rollnotice from './rollnotice.vue'
 export default {
     data() {
         return {
@@ -55,7 +57,8 @@ export default {
     components: {
         slider,
         grids,
-        homeList
+        homeList,
+        rollnotice
     }
 }
 </script>

@@ -28,7 +28,7 @@
         <yd-tabbar-item title="导航3" link="/scroll" exact>
             <yd-icon name="like-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
-        <yd-tabbar-item title="个人中心" link="/lightbox" exact>
+        <yd-tabbar-item title="个人中心" link="/mycentr" exact>
             <yd-icon name="ucenter-outline" slot="icon" size="0.54rem"></yd-icon>
         </yd-tabbar-item>
     </yd-tabbar>
@@ -54,7 +54,7 @@ export default {
                     return "美图欣赏"
                 case 'scroll':
                     return "导航3"
-                case 'lightbox':
+                case 'mycentr':
                     return "个人中心"
                 case 'lightbox0':
                     return "子路由"
