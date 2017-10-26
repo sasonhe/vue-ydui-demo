@@ -16,6 +16,10 @@ Vue.use(YDUI)
 Vue.use(VueRouter)
 Vue.use(VueResource)
 
+document.addEventListener('DOMContentLoaded', function () {
+    typeof FastClick === 'function' && FastClick.attach(document.body);
+}, false)
+
 var router = new VueRouter({
     // mode: 'history',
     routes
