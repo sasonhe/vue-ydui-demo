@@ -1,9 +1,7 @@
 <template>
-<<<<<<< HEAD
     <div>
         <h1>hello world !</h1>
     </div>
-=======
 <div>
     <yd-navbar title="导航2">
         <a href="javascript:;" slot="right">
