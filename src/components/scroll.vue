@@ -1,8 +1,8 @@
 
 <template>
 <yd-scrolltab>
-    <yd-scrolltab-panel v-for="item in list" :key="" :label="item.label" :icon="item.icon" :active="item.active">
-        <div style="height: 350px;" :style="{backgroundColor: item.color}">{{item.label}}</div>
+    <yd-scrolltab-panel v-for="item in list" :key="item.id" :label="item.label" :icon="item.icon" :active="item.active">
+        <div style="height: 4.2rem;" :style="{backgroundColor: item.color}">{{item.label}}</div>
     </yd-scrolltab-panel>
 </yd-scrolltab>
 </template>
@@ -27,7 +27,7 @@ export default {
                     color: 'blue'
                 },
                 {
-                    label: '洗衣机',
+                    label: '彩电',
                     icon: 'demo-icons-category3',
                     color: 'yellow'
                 },
@@ -37,22 +37,22 @@ export default {
                     color: 'green'
                 },
                 {
-                    label: '厨房大家电',
+                    label: '煤气罐',
                     icon: 'demo-icons-category5',
                     color: 'saddlebrown'
                 },
                 {
-                    label: '厨房小家电',
+                    label: '洗衣机',
                     icon: 'demo-icons-category6',
                     color: 'darkgoldenrod'
                 },
                 {
-                    label: '生活家电',
+                    label: '二手航母',
                     icon: 'demo-icons-category7',
                     color: 'indianred'
                 },
                 {
-                    label: '风扇',
+                    label: '核弹头',
                     icon: 'demo-icons-category8',
                     color: 'aqua'
                 }

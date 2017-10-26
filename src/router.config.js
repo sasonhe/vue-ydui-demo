@@ -2,7 +2,7 @@
 import home from './components/home.vue'
 import scroll from './components/scroll.vue'
 import tabar from './components/tabar.vue'
-import lightbox from './components/lightbox.vue'
+import mycentr from './components/mycentr.vue'
 import lightbox0 from './components/lightbox0.vue'
 export default [
     // 路由
@@ -22,9 +22,9 @@ export default [
         component: scroll
     },
     {
-        path: '/lightbox',
-        name: 'lightbox',
-        component: lightbox
+        path: '/mycentr',
+        name: 'mycentr',
+        component: mycentr
     },
     {
         path: '/lightbox0',
