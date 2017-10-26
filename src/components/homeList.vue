@@ -1,7 +1,7 @@
 <template>
-<yd-pullrefresh :callback="loadList" ref="pullrefreshDemo">
+<yd-infinitescroll :callback="loadList" ref="infinitescrollDemo">
 
-    <yd-list theme="4">
+    <yd-list theme="4" slot="list">
         <yd-list-item v-for="item, key in list" :key="key">
             <img slot="img" :src="item.img">
             <span slot="title">{{item.title}}</span>
@@ -12,17 +12,26 @@
                 </div>
                 <div>content</div>
             </yd-list-other>
+            <yd-list-other slot="other">
+                <p>描述1234567812312313213</p>
+            </yd-list-other>
         </yd-list-item>
     </yd-list>
 
-</yd-pullrefresh>
+    <!-- 数据全部加载完毕显示 -->
+    <span slot="doneTip">呼啦啦~没有数据啦~~</span>
+
+    <!-- 加载中提示，不指定，将显示默认加载中图标 -->
+    <img slot="loadingTip" src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg" />
+</yd-infinitescroll>
 </template>
 
-<script>
+<script type="text/babel">
 export default {
     data() {
         return {
             page: 1,
+            pageSize: 10,
             list: [{
                     img: "http://img1.shikee.com/try/2016/06/23/14381920926024616259.jpg",
                     title: "标题标题标题标题标题",
@@ -62,27 +71,26 @@ export default {
             ]
         }
     },
-    created() {},
     methods: {
         loadList() {
-            const url = 'http://list.ydui.org/getdata.php';
-
-            this.$http.jsonp(url, {
+            this.$http.jsonp('http://list.ydui.org/getdata.php?type=backposition', {
                 params: {
-                    type: 'pulldown',
-                    page: this.page
+                    page: this.page,
+                    pagesize: this.pageSize
                 }
-            }).then((response) => {
-
+            }).then(function(response) {
                 const _list = response.body;
 
-                this.list = [..._list, ...this.list];
+                this.list = [...this.list, ..._list];
 
-                this.$dialog.toast({
-                    mes: _list.length > 0 ? '为您更新了' + _list.length + '条内容' : '已是最新内容'
-                });
+                if (_list.length < this.pageSize || this.page == 3) {
+                    /* 所有数据加载完毕 */
+                    this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.loadedDone');
+                    return;
+                }
 
-                this.$refs.pullrefreshDemo.$emit('ydui.pullrefresh.finishLoad');
+                /* 单次请求数据完毕 */
+                this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
 
                 this.page++;
             });
@@ -91,5 +99,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 </style>
