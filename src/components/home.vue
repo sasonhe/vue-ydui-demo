@@ -63,3 +63,8 @@ export default {
     }
 }
 </script>
+<style>
+    .yd-backtop{
+        bottom:8%;
+    }
+</style>
