@@ -15,6 +15,7 @@
     <grids></grids>
     <rollnotice></rollnotice>
     <homeList></homeList>
+<yd-backtop></yd-backtop>
 </div>
 </template>
 

@@ -23,7 +23,9 @@
 
     <!-- 加载中提示，不指定，将显示默认加载中图标 -->
     <img slot="loadingTip" src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg" />
+
 </yd-infinitescroll>
+
 </template>
 
 <script type="text/babel">
