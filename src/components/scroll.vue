@@ -64,7 +64,7 @@ export default {
     }
 }
 </script>
-<style >
+<style>
 .yd-scrolltab-item{
     text-align: center;display: block;line-height: 1rem;
 }
