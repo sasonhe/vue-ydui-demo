@@ -4,6 +4,7 @@ import scroll from './components/scroll.vue'
 import tabar from './components/tabar.vue'
 import mycentr from './components/mycentr.vue'
 import lightbox0 from './components/lightbox0.vue'
+import position from './components/position.vue'
 export default [
     // 路由
     {
@@ -30,5 +31,10 @@ export default [
         path: '/lightbox0',
         name: 'lightbox0',
         component: lightbox0
+    },
+    {
+        path: '/position',
+        name: 'position',
+        component: position
     }
 ]

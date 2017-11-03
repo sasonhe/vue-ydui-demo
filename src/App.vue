@@ -59,6 +59,8 @@ export default {
                     return "个人中心"
                 case 'lightbox0':
                     return "子路由"
+                case 'position':
+                    return "H5地理定位"
             }
         }
     },

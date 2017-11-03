@@ -30,6 +30,7 @@
         "webpack-dev-server": "^2.5.1"
     },
     "dependencies": {
+        "vue-amap": "^0.3.1",
         "vue-ydui": "^1.0.6"
     }
 }
