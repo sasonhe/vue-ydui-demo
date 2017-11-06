@@ -1,24 +1,13 @@
 <template>
-  <div>
-    <div class="amap-wrapper">
-      <el-amap :vid="'amap-vue'"></el-amap>
-    </div>
-  </div>
+<p>开发中...</p>
 </template>
-
 <script>
-export default {
-  data () {
-    return {
+export default{
+    components:{
 
     }
-  }
 }
 </script>
+<style scoped>
 
-<style>
-.amap-wrapper {
-  width: 100%;
-  height: 600px;
-}
 </style>
