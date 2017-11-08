@@ -12,10 +12,10 @@ module.exports = {
     devServer: {
         inline:true,
         host: '0.0.0.0',
-        port: 8080
+        port: 8088
     },
     plugins: [
-        new OpenBrowserPlugin({ url: 'http://localhost:8080' })
+        new OpenBrowserPlugin({ url: 'http://localhost:8088' })
     ],
     // 加载器配置
     module: {
