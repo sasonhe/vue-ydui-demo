@@ -9,6 +9,7 @@ import 'vue-ydui/dist/ydui.rem.css'
 import 'vue-ydui/dist/ydui.flexible.js'
 // 引入路由配置
 import routes from './router.config'
+
 // 全局注册
 Vue.use(YDUI)
 Vue.use(VueRouter)
