@@ -1,4 +1,5 @@
-var OpenBrowserPlugin = require('open-browser-webpack-plugin')
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
+// var proxy = require('http-proxy-middleware');
 module.exports = {
     // 入口文件
     entry: {
@@ -13,6 +14,7 @@ module.exports = {
         inline:true,
         host: '0.0.0.0',
         port: 8088
+
     },
     plugins: [
         new OpenBrowserPlugin({ url: 'http://localhost:8088' })

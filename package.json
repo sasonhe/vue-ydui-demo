@@ -17,6 +17,7 @@
         "better-scroll": "^0.1.11",
         "css-loader": "^0.28.4",
         "fs": "0.0.1-security",
+        "http-proxy-middleware": "^0.17.4",
         "link": "^0.1.5",
         "open-browser-webpack-plugin": "0.0.5",
         "style-loader": "^0.18.2",
