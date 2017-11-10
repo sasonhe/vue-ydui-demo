@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 // 后端api路由
-app.use('/api/user', userApi,proxy({target: 'http://127.0.0.1:3030/api/', changeOrigin: true}));
+app.use('/api/user', userApi, proxy({target: 'http://127.0.0.1:3030/api/', changeOrigin: true}));
 
 // 监听端口
 app.listen(3030);
