@@ -43,15 +43,11 @@ export default {
             });
         },
         addUser() {
-            // var name = this.userName;
-            // var pass = this.pass;
             this.$http.post('/api/user/addUser', {
                 params: {
                     username: this.name,
                     pass: this.pass
                 }
-                // username: name,
-                // pass: pass
             }, {}).then((response) => {
                 openConfrim();
                 console.log(response);
