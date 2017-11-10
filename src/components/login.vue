@@ -45,7 +45,7 @@ export default {
         addUser() {
             this.$http.post('/api/user/addUser', {
                 params: {
-                    username: this.name,
+                    userName: this.name,
                     pass: this.pass
                 }
             }, {}).then((response) => {
