@@ -15,7 +15,7 @@
         </yd-cell-item>
     </yd-cell-group>
     <yd-button-group>
-        <yd-button size="large" @click.native="addUser">提交</yd-button>
+        <yd-button size="large">提交</yd-button>
     </yd-button-group>
 </yd-layout>
 </template>
@@ -41,17 +41,6 @@ export default {
                     });
                 }
             });
-        },
-        addUser() {
-            this.$http.post('/api/user/addUser', {
-                params: {
-                    userName: this.name,
-                    pass: this.pass
-                }
-            }, {}).then((response) => {
-                openConfrim();
-                console.log(response);
-            })
         },
         sendCode1() {
             this.$dialog.loading.open('发送中...');
