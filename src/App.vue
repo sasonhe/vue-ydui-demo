@@ -17,7 +17,6 @@
             <router-view></router-view>
         </keep-alive>
     </transition>
-
     <yd-tabbar slot="tabbar">
         <yd-tabbar-item title="首页" link="/" exact>
             <yd-icon name="home-outline" slot="icon" size="0.54rem"></yd-icon>
@@ -30,8 +29,7 @@
         </yd-tabbar-item>
         <yd-tabbar-item title="个人中心" link="/mycentr" exact>
             <yd-icon name="ucenter-outline" slot="icon" size="0.54rem"></yd-icon>
-            <yd-badge slot="badge" type="danger">2</yd-badge>
-        </yd-tabbar-item>
+            <!-- <yd-badge slot="badge" type="danger">2</yd-badge> --></yd-tabbar-item>
     </yd-tabbar>
 </yd-layout>
 </template>
@@ -46,7 +44,7 @@ export default {
     },
     computed: {
         title() {
-            switch (this.$route.path.split('/')[1]) {
+            switch(this.$route.path.split('/')[1]) {
                 case '':
                     return "首页"
                 case 'home':
@@ -66,11 +64,8 @@ export default {
     },
     methods: {
         getResult(val) {
-            if (!val) return [];
-            return [
-                'Apple', 'Banana', 'Orange', 'Durian', 'Lemon', 'Peach', 'Cherry', 'Berry',
-                'Core', 'Fig', 'Haw', 'Melon', 'Plum', 'Pear', 'Peanut', 'Other'
-            ].filter(value => new RegExp(val, 'i').test(value));
+            if(!val) return [];
+            return ['Apple', 'Banana', 'Orange', 'Durian', 'Lemon', 'Peach', 'Cherry', 'Berry', 'Core', 'Fig', 'Haw', 'Melon', 'Plum', 'Pear', 'Peanut', 'Other'].filter(value => new RegExp(val, 'i').test(value));
         },
         itemClickHandler(item) {
             this.$dialog.toast({
