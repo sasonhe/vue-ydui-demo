@@ -56,7 +56,7 @@ export default {
                 case 'mycentr':
                     return "个人中心"
                 case 'lightbox0':
-                    return "子路由"
+                    return "路由"
                 case 'position':
                     return "H5地理定位"
             }
