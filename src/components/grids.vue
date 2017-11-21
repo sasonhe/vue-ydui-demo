@@ -2,7 +2,7 @@
 <yd-grids-group :rows="4">
     <yd-grids-item link="/lightbox0">
         <img slot="icon" src="http://static.ydcss.com/ydui/img/logo.png">
-        <span slot="text">子路由</span>
+        <span slot="text">路由</span>
     </yd-grids-item>
     <yd-grids-item link="/position">
         <yd-icon slot="icon" name="location" color="#FF685D"></yd-icon>
