@@ -2,7 +2,7 @@
 <yd-layout>
     <yd-cell-group>
         <yd-cell-item> <span slot="left">用户名：</span>
-            <yd-input slot="right" required v-model="username" max="20" placeholder="请输入用户名"></yd-input>
+            <yd-input slot="right" required v-model="userName" max="20" placeholder="请输入用户名"></yd-input>
         </yd-cell-item>
         <yd-cell-item> <span slot="left">密码：</span>
             <yd-input slot="right" type="password" v-model="pass" placeholder="请输入密码"></yd-input>
