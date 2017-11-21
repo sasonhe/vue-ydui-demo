@@ -1,5 +1,5 @@
 var OpenBrowserPlugin = require('open-browser-webpack-plugin');
-// var proxy = require('http-proxy-middleware');
+
 module.exports = {
     // 入口文件
     entry: {
