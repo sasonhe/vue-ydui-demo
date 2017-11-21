@@ -12,7 +12,7 @@
     <yd-popup v-model="show" position="left" width="60%">
         <yd-button type="danger" style="margin: 30px;" @click.native="show = false">Close</yd-button>
     </yd-popup>
-    <transition name="slide-fade">
+    <transition name="slide-fade" mode="out-in">
         <keep-alive>
             <router-view></router-view>
         </keep-alive>
@@ -90,12 +90,26 @@ export default {
     color: rgb(9, 187, 7) !important;
 }
 
-.slide-fade-enter-active {
+/*.slide-fade-enter-active {
     transition: all 0.6s ease;
 }
 
 .slide-fade-enter,
 .slide-fade-leave-to {
     transform: translate3d(100%, 0, 0);
+}*/
+
+.slide-fade-enter {
+  opacity:0;
+}
+.slide-fade-leave{
+  opacity:1;
+}
+.slide-fade-enter-active{
+  transition:opacity .3s;
+}
+.slide-fade-leave-active{
+  opacity:0;
+  transition:opacity .3s;
 }
 </style>
