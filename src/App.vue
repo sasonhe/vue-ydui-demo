@@ -90,14 +90,7 @@ export default {
     color: rgb(9, 187, 7) !important;
 }
 
-/*.slide-fade-enter-active {
-    transition: all 0.6s ease;
-}
 
-.slide-fade-enter,
-.slide-fade-leave-to {
-    transform: translate3d(100%, 0, 0);
-}*/
 
 .slide-fade-enter {
   opacity:0;
