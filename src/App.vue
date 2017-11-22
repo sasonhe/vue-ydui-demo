@@ -90,8 +90,6 @@ export default {
     color: rgb(9, 187, 7) !important;
 }
 
-
-
 .slide-fade-enter {
   opacity:0;
 }
