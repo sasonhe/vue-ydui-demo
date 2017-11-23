@@ -61,8 +61,11 @@ export default {
         }
     },
     created () {
+        this.$http.jsonp('https://api.weibo.com/2/statuses/public_timeline.json').then(function(res) {
+                const a  = res.body;
+                console.log(res);
+        });
 
-            
 
     },
     methods: {
