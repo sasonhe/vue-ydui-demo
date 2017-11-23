@@ -29,7 +29,7 @@
         </yd-tabbar-item>
         <yd-tabbar-item title="个人中心" link="/mycentr" exact>
             <yd-icon name="ucenter-outline" slot="icon" size="0.54rem"></yd-icon>
-            <!-- <yd-badge slot="badge" type="danger">2</yd-badge> --></yd-tabbar-item>
+        </yd-tabbar-item>
     </yd-tabbar>
 </yd-layout>
 </template>
