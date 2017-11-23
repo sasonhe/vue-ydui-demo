@@ -56,8 +56,14 @@ export default {
                 title: "男装衣服男夏t恤 男士短袖t恤圆领夏季潮牌宽松原宿风半截袖男",
                 marketprice: 56.23,
                 productprice: 89.36
-            }]
+            }],
+            url:[]
         }
+    },
+    created () {
+
+            
+
     },
     methods: {
         loadList() {
