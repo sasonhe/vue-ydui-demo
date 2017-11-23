@@ -1,5 +1,5 @@
 <template>
-<yd-layout style="max-width:100%;">
+<yd-layout style="max-width:750px;">
     <yd-navbar slot="navbar">
         <a href="javascript:;" @click="goback" slot="left">
             <yd-navbar-back-icon></yd-navbar-back-icon>

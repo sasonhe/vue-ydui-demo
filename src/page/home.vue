@@ -20,10 +20,10 @@
 </template>
 
 <script type="text/babel">
-import slider from './slider.vue'
-import grids from './grids.vue'
-import homeList from './homeList.vue'
-import rollnotice from './rollnotice.vue'
+import slider from '../components/slider.vue'
+import grids from '../components/grids.vue'
+import homeList from '../components/homeList.vue'
+import rollnotice from '../components/rollnotice.vue'
 export default {
     data() {
         return {
