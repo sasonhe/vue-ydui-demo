@@ -64,14 +64,6 @@ export default {
             url: []
         }
     },
-    created() {
-        this.$http.jsonp('https://api.weibo.com/2/statuses/public_timeline.json').then(function(res) {
-            const a = res.body;
-            console.log(res);
-        });
-
-
-    },
     methods: {
         loadList() {
             this.$http.jsonp('http://list.ydui.org/getdata.php?type=backposition', {
