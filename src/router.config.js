@@ -2,11 +2,13 @@
 import home from './page/home.vue'
 import scroll from './page/scroll.vue'
 import tabar from './page/tabar.vue'
-import mycentr from './components/mycentr.vue'
+import mycentr from './page/mycentr.vue'
 import lightbox0 from './components/lightbox0.vue'
 import position from './components/position.vue'
+import error from './components/error.vue'
 export default [
     // 路由
+
     {
         path: '/',
         name: 'home',
@@ -36,5 +38,9 @@ export default [
         path: '/position',
         name: 'position',
         component: position
+    },
+    {
+       path:'*',
+       component:error
     }
 ]
