@@ -5,7 +5,7 @@ import tabar from './page/tabar.vue'
 import mycentr from './page/mycentr.vue'
 import lightbox0 from './components/lightbox0.vue'
 import position from './components/position.vue'
-import error from './components/error.vue'
+import error from './page/error.vue'
 export default [
     // 路由
 
