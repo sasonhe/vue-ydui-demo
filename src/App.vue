@@ -44,7 +44,7 @@ export default {
     },
     computed: {
         title() {
-            switch(this.$route.path.split('/')[1]) {
+            switch (this.$route.path.split('/')[1]) {
                 case '':
                     return "首页"
                 case 'home':
@@ -64,7 +64,7 @@ export default {
     },
     methods: {
         getResult(val) {
-            if(!val) return [];
+            if (!val) return [];
             return ['Apple', 'Banana', 'Orange', 'Durian', 'Lemon', 'Peach', 'Cherry', 'Berry', 'Core', 'Fig', 'Haw', 'Melon', 'Plum', 'Pear', 'Peanut', 'Other'].filter(value => new RegExp(val, 'i').test(value));
         },
         itemClickHandler(item) {
@@ -77,7 +77,7 @@ export default {
                 mes: `搜索：${value}`
             });
         },
-        goback(){
+        goback() {
             this.$router.go(-1);
         }
     },
@@ -94,16 +94,19 @@ export default {
 }
 
 .slide-fade-enter {
-  opacity:0;
+    opacity: 0;
 }
-.slide-fade-leave{
-  opacity:1;
+
+.slide-fade-leave {
+    opacity: 1;
 }
-.slide-fade-enter-active{
-  transition:opacity .3s;
+
+.slide-fade-enter-active {
+    transition: opacity .3s;
 }
-.slide-fade-leave-active{
-  opacity:0;
-  transition:opacity .3s;
+
+.slide-fade-leave-active {
+    opacity: 0;
+    transition: opacity .3s;
 }
 </style>
