@@ -9,19 +9,17 @@ import 'vue-ydui/dist/ydui.rem.css'
 import 'vue-ydui/dist/ydui.flexible.js'
 // 引入路由配置
 import routes from './router.config'
-//全局样式重置
-// import reset from './common/reset.css'
-//
+
+// 全局注册
 Vue.use(YDUI)
 Vue.use(VueRouter)
 Vue.use(VueResource)
-
+// 解决点击事件延迟
 document.addEventListener('DOMContentLoaded', function () {
     typeof FastClick === 'function' && FastClick.attach(document.body);
 }, false)
 
 var router = new VueRouter({
-    // mode: 'history',
     routes
 })
 

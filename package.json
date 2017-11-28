@@ -16,6 +16,8 @@
         "babel-preset-stage-0": "^6.24.1",
         "better-scroll": "^0.1.11",
         "css-loader": "^0.28.4",
+        "fs": "0.0.1-security",
+        "http-proxy-middleware": "^0.17.4",
         "link": "^0.1.5",
         "open-browser-webpack-plugin": "0.0.5",
         "style-loader": "^0.18.2",
@@ -30,6 +32,9 @@
         "webpack-dev-server": "^2.5.1"
     },
     "dependencies": {
+        "express": "^4.16.2",
+        "mysql": "^2.15.0",
+        "vue-amap": "^0.3.1",
         "vue-ydui": "^1.0.6"
     }
 }

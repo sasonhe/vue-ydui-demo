@@ -1,9 +1,9 @@
 <template>
-<yd-layout style="max-width:100%;">
+<yd-layout style="max-width:750px;">
     <yd-navbar slot="navbar">
-        <router-link to="/" slot="left">
+        <a href="javascript:;" @click="goback" slot="left">
             <yd-navbar-back-icon></yd-navbar-back-icon>
-        </router-link>
+        </a>
         <div slot="center"><span class="yd-navbar-center-title" style="color: rgb(92, 92, 92); font-size: 0.4rem;">{{title}}</span></div>
         <a href="javascript:;" slot="right">
             <yd-icon name="more" style="color: rgb(92, 92, 92);" @click.native="show = true"></yd-icon>
@@ -12,12 +12,11 @@
     <yd-popup v-model="show" position="left" width="60%">
         <yd-button type="danger" style="margin: 30px;" @click.native="show = false">Close</yd-button>
     </yd-popup>
-    <transition name="slide-fade">
+    <transition name="slide-fade" mode="out-in">
         <keep-alive>
             <router-view></router-view>
         </keep-alive>
     </transition>
-
     <yd-tabbar slot="tabbar">
         <yd-tabbar-item title="首页" link="/" exact>
             <yd-icon name="home-outline" slot="icon" size="0.54rem"></yd-icon>
@@ -30,7 +29,6 @@
         </yd-tabbar-item>
         <yd-tabbar-item title="个人中心" link="/mycentr" exact>
             <yd-icon name="ucenter-outline" slot="icon" size="0.54rem"></yd-icon>
-            <yd-badge slot="badge" type="danger">2</yd-badge>
         </yd-tabbar-item>
     </yd-tabbar>
 </yd-layout>
@@ -58,17 +56,16 @@ export default {
                 case 'mycentr':
                     return "个人中心"
                 case 'lightbox0':
-                    return "子路由"
+                    return "路由"
+                case 'position':
+                    return "H5地理定位"
             }
         }
     },
     methods: {
         getResult(val) {
             if (!val) return [];
-            return [
-                'Apple', 'Banana', 'Orange', 'Durian', 'Lemon', 'Peach', 'Cherry', 'Berry',
-                'Core', 'Fig', 'Haw', 'Melon', 'Plum', 'Pear', 'Peanut', 'Other'
-            ].filter(value => new RegExp(val, 'i').test(value));
+            return ['Apple', 'Banana', 'Orange', 'Durian', 'Lemon', 'Peach', 'Cherry', 'Berry', 'Core', 'Fig', 'Haw', 'Melon', 'Plum', 'Pear', 'Peanut', 'Other'].filter(value => new RegExp(val, 'i').test(value));
         },
         itemClickHandler(item) {
             this.$dialog.toast({
@@ -79,6 +76,9 @@ export default {
             this.$dialog.toast({
                 mes: `搜索：${value}`
             });
+        },
+        goback() {
+            this.$router.go(-1);
         }
     },
     watch: {
@@ -93,12 +93,20 @@ export default {
     color: rgb(9, 187, 7) !important;
 }
 
-.slide-fade-enter-active {
-    transition: all 0.6s ease;
+.slide-fade-enter {
+    opacity: 0;
 }
 
-.slide-fade-enter,
-.slide-fade-leave-to {
-    transform: translate3d(100%, 0, 0);
+.slide-fade-leave {
+    opacity: 1;
+}
+
+.slide-fade-enter-active {
+    transition: opacity .3s;
+}
+
+.slide-fade-leave-active {
+    opacity: 0;
+    transition: opacity .3s;
 }
 </style>

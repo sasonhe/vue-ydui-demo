@@ -2,11 +2,11 @@
 <yd-grids-group :rows="4">
     <yd-grids-item link="/lightbox0">
         <img slot="icon" src="http://static.ydcss.com/ydui/img/logo.png">
-        <span slot="text">子路由</span>
+        <span slot="text">路由</span>
     </yd-grids-item>
-    <yd-grids-item>
-        <yd-icon slot="icon" name="home" color="#FF685D"></yd-icon>
-        <span slot="text">导航2</span>
+    <yd-grids-item link="/position">
+        <yd-icon slot="icon" name="location" color="#FF685D"></yd-icon>
+        <span slot="text">定位</span>
     </yd-grids-item>
     <yd-grids-item>
         <yd-icon slot="icon" name="home" color="#FF685D"></yd-icon>
@@ -37,11 +37,7 @@
 
 <script>
 export default {
-    data() {
-        return {}
-    },
-    created() {},
-    methods: {}
+
 }
 </script>
 

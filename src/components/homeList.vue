@@ -1,15 +1,9 @@
 <template>
 <yd-infinitescroll :callback="loadList" ref="infinitescrollDemo">
-
     <yd-list theme="4" slot="list">
-        <yd-list-item v-for="item, key in list" :key="key">
-            <img slot="img" :src="item.img">
-            <span slot="title">{{item.title}}</span>
+        <yd-list-item v-for="item, key in list" :key="key"> <img slot="img" :src="item.img"> <span slot="title">{{item.title}}</span>
             <yd-list-other slot="other">
-                <div>
-                    <span class="list-price"><em>¥</em>{{item.marketprice}}</span>
-                    <span class="list-del-price">¥{{item.productprice}}</span>
-                </div>
+                <div> <span class="list-price"><em>¥</em>{{item.marketprice}}</span> <span class="list-del-price">¥{{item.productprice}}</span> </div>
                 <div>content</div>
             </yd-list-other>
             <yd-list-other slot="other">
@@ -17,15 +11,11 @@
             </yd-list-other>
         </yd-list-item>
     </yd-list>
-
     <!-- 数据全部加载完毕显示 -->
     <span slot="doneTip">呼啦啦~没有数据啦~~</span>
-
     <!-- 加载中提示，不指定，将显示默认加载中图标 -->
     <img slot="loadingTip" src="http://static.ydcss.com/uploads/ydui/loading/loading10.svg" />
-
 </yd-infinitescroll>
-
 </template>
 
 <script type="text/babel">
@@ -70,7 +60,8 @@ export default {
                     marketprice: 56.23,
                     productprice: 89.36
                 }
-            ]
+            ],
+            url: []
         }
     },
     methods: {
@@ -82,18 +73,14 @@ export default {
                 }
             }).then(function(response) {
                 const _list = response.body;
-
                 this.list = [...this.list, ..._list];
-
                 if (_list.length < this.pageSize || this.page == 3) {
                     /* 所有数据加载完毕 */
                     this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.loadedDone');
                     return;
                 }
-
                 /* 单次请求数据完毕 */
                 this.$refs.infinitescrollDemo.$emit('ydui.infinitescroll.finishLoad');
-
                 this.page++;
             });
         }

@@ -1,9 +1,6 @@
 <template>
 <yd-layout>
-
-
     <yd-lightbox :num="list.length">
-
         <yd-flexbox style="padding-right: 0.05rem;">
             <yd-flexbox-item v-for="(item, index) in list" v-if="index < 3" :key="item.id">
                 <yd-lightbox-img style="width: 100%;padding-left: 0.05rem;" :src="item.src" :original="item.original"></yd-lightbox-img>

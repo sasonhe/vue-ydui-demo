@@ -1,11 +1,14 @@
 // import 组件
-import home from './components/home.vue'
-import scroll from './components/scroll.vue'
-import tabar from './components/tabar.vue'
-import mycentr from './components/mycentr.vue'
+import home from './page/home.vue'
+import scroll from './page/scroll.vue'
+import tabar from './page/tabar.vue'
+import mycentr from './page/mycentr.vue'
 import lightbox0 from './components/lightbox0.vue'
+import position from './components/position.vue'
+import error from './page/error.vue'
 export default [
     // 路由
+
     {
         path: '/',
         name: 'home',
@@ -30,5 +33,14 @@ export default [
         path: '/lightbox0',
         name: 'lightbox0',
         component: lightbox0
+    },
+    {
+        path: '/position',
+        name: 'position',
+        component: position
+    },
+    {
+       path:'*',
+       component:error
     }
 ]

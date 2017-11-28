@@ -47,7 +47,7 @@ export default {
                     color: 'darkgoldenrod'
                 },
                 {
-                    label: '二手航母',
+                    label: '航母',
                     icon: 'demo-icons-category7',
                     color: 'indianred'
                 },
@@ -64,6 +64,8 @@ export default {
     }
 }
 </script>
-<style scoped>
-
+<style>
+.yd-scrolltab-item{
+    text-align: center;display: block;line-height: 1rem;
+}
 </style>
