@@ -12,10 +12,12 @@ import routes from './router.config'
 
 // 全局注册
 Vue.use(YDUI)
+// 注册路由
 Vue.use(VueRouter)
+// 注册http
 Vue.use(VueResource)
 // 解决点击事件延迟
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     typeof FastClick === 'function' && FastClick.attach(document.body);
 }, false)
 
