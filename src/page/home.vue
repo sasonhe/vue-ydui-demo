@@ -1,21 +1,11 @@
 <template>
 <div>
     <yd-search :result="result" style="rgba(151, 151, 151,0.4)" fullpage v-model="value2" :item-click="itemClickHandler" :on-submit="submitHandler"></yd-search>
-    <!-- <yd-navbar title="首页" fixed bgcolor="rgba(151, 151, 151,0.4)">
-        <a href="javascript:;" slot="right">
-            <yd-icon name="more" style="color: rgb(92, 92, 92);"></yd-icon>
-        </a>
-    </yd-navbar> -->
-    <!-- <yd-navbar fixed>
-        <router-link to="#" slot="right">
-            <yd-icon name="ucenter-outline"></yd-icon>
-        </router-link>
-    </yd-navbar> -->
     <slider></slider>
     <grids></grids>
     <rollnotice></rollnotice>
     <homeList></homeList>
-<yd-backtop></yd-backtop>
+    <yd-backtop></yd-backtop>
 </div>
 </template>
 
@@ -64,7 +54,7 @@ export default {
 }
 </script>
 <style>
-    .yd-backtop{
-        bottom:8%;
-    }
+.yd-backtop {
+    bottom: 8%;
+}
 </style>
