@@ -78,7 +78,8 @@ export default {
             });
         },
         goback() {
-            this.$router.go(-1);
+            // this.$router.go(-1);
+            javascript: history.back(-1)
         }
     },
     watch: {
